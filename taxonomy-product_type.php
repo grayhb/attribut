@@ -67,9 +67,20 @@
 											//первая фотография продукции
 											//if ($product_firstfoto =="") $product_firstfoto = get_bloginfo('template_url').'/timthumb.php?src='.$product_img[0].'&w=653&h=412&zc=0';
 											if ($product_firstfoto =="") { 
+											
 												$product_firstfoto = $product_img[0];
-												$style_size_firstfoto  = "width: 653px;";
-												$h=round(653 / ($product_img[1] / $product_img[2]),0);
+												
+												$k = $product_img[1] / $product_img[2];
+												
+												$w = 653;
+												$h = $w / $k;
+												
+												if ($h > $w) {
+													$h = $w;
+													$w = $h * $k;
+												}
+												
+												$style_size_firstfoto  = "width: ".$w."px;";
 												$style_size_firstfoto  .="height:".$h."px;";
 											}
 										}
