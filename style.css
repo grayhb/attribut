@@ -236,10 +236,15 @@ top:0 !important;
 #footer .design:hover {
 	text-decoration: underline;
 }
-.photo, .scroll .alignnone {
+.content .photo, .scroll .alignnone {
 	overflow: hidden;
 	margin: 0 0 22px;
 }
+
+.content .photo {
+	min-height:415px;
+}
+
 .text-block .alignnone {
 	overflow: hidden;
 	border: 1px solid #aeaeae;

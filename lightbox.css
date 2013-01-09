@@ -20,9 +20,9 @@
     position: absolute;
     /*top: 5px;*/
 	background: none repeat scroll 0% 0% rgb(255, 255, 255);
-    padding: 10px 10px 10px 10px;
+    padding: 18px;
 	width:975px;
-	margin: 0px 0px 0px -487px;
+	margin: 0px 0px 0px -507px;
 	left: 50%;
 }
 
@@ -35,9 +35,10 @@
 	height:23px;
 	color:#777;
 	padding-top:0px;
-	padding-left:10px;
 	margin-top:0px;
 	margin-bottom:0px;
+	width:790px;
+	text-align:center;
 }
 
 .lightbox .close {
@@ -154,7 +155,7 @@
 
 
 .lightbox .scrollbar   {
-	right:10px;
+	right:20px;
 	height:550px; 
 	position: absolute;
 	width:13px; 
@@ -198,75 +199,76 @@
 /* Лайтбокс публикации  */ 
 
 .publications-lightbox {
-	width:725px;
-	margin: 0px 0px 0px -355px;
-	padding: 10px 20px 10px 10px;
+
 }
 
 .publications-lightbox .image {
-	width:550px;
+	/*width:790px;*/
 }
 
 .publications-lightbox .image-holder {
-	height: 510px;
+	/*height: 510px;*/
 }
 
 .publications-lightbox .image-list ul li ul li {
-	height: 170px;
+	/*height: 170px;
 	margin: 0 0 0 0;
-	float:right;
+	float:right;*/
 }
 
 .publications-lightbox .image-list ul li ul li  a {
-	height:170px;
+	/*height:170px;
 	display:block;
-	padding-top:10px;
+	padding-top:10px;*/
 }
 
 
 .publications-lightbox .image ul {
-	width: 550px;
+	/*width: 550px;*/
 
 }
 
 .publications-lightbox .image ul li {
-	width: 550px;
+	/*width: 550px;*/
 }
 
 .publications-lightbox .bottom {
+/*
 	width: 470px;
 	padding: 2px 0 0;
 	height: 30px;
+	*/
 }
 
 .publications-lightbox .image-list {
-	width: 150px;
-	margin: -25px 0 0;
+	/*width: 150px;
+	margin: -25px 0 0;*/
 }
 
 .publications-lightbox  #slider_holder  {
-	height:554px;	
+	/*height:554px;	*/
 }
 
 
 .publications-lightbox  #slider_holder #frame {
-	margin-top: -2px;
-	height:554px;
+	/*margin-top: -2px;
+	height:554px;*/
 }
 
 
 .publications-lightbox  #slider_holder #frame ul li {
-	height:130px;
+	/*height:130px;
 	padding: 4px 5px 4px 0px;
+	*/
 }
 
 .publications-lightbox .prev, .publications-lightbox .next {
-	width:275px;
-	background: url(./images/pub_prev.png) no-repeat  5px center transparent;
+	/*width:275px;*/
+	/*background: url(./images/pub_prev.png) no-repeat  5px center transparent;*/
 }
 
 .publications-lightbox .next {
-	background: url(./images/pub_next.png)  no-repeat  225px center transparent;
+	/*background: url(./images/pub_next.png)  no-repeat  225px center transparent;*/
 }
 
 
@@ -318,9 +320,9 @@
 
 #slider_holder #frame ul li {
 	width:145px;
-	height:94px;
+	height:127px;
 	margin:0;
-	padding:6px 5px 10px 0px;
+	padding:7px 5px 7px 0px;
 	float:left;
 }
 
@@ -345,12 +347,14 @@
 }
 
 #slider_holder #frame {
-	height:550px;
+	height:564px;
 	width:145px;
 	margin:0;
 	padding-left:5px;
 	padding-right:5px;
 	float:left;
+	position:relative;
+	margin-top:-7px;
 }
 
 
@@ -358,7 +362,7 @@
 
 .portfolio {
 	width:936px;
-	height:630px;	
+	height:620px;	
 	position:relative;
 }
 

@@ -53,6 +53,8 @@ $(document).ready(function(){
 	//обработка событий закрытия лайтбокса
 	$('.lightbox-holder .bg, .lightbox-holder .close').click(function(){
 		$(this).parents('.lightbox-holder').fadeOut(200);
+		$('.scroll').show();
+		$('#footer').css('margin-top', 0 );				
 		return false;
 	});
 	
@@ -81,8 +83,13 @@ $(document).ready(function(){
 		$('.lightbox-holder').css('top', header_height + 10);
 		$('.lightbox-holder').css('height', $('.lightbox-holder').height() - header_height-10);
 		*/
+		
+		$('.lightbox-holder .lightbox').css({top:($('.scroll').offset().top)});
+		$('.scroll').hide();
+		$('#footer').css('margin-top', 320 );
+		
 		$('.lightbox-holder').fadeIn(200);
-		$('.lightbox-holder .lightbox').css({top:($(window).height()/2-$('.lightbox-holder .lightbox').outerHeight()/2 + $(window).scrollTop())});
+		//$('.lightbox-holder .lightbox').css({top:($(window).height()/2-$('.lightbox-holder .lightbox').outerHeight()/2 + $(window).scrollTop())});
 		
 		var container_main = $(this).parent().parent().find('.where-will-be-data');
 		if (container_main.html() == "") {
@@ -140,7 +147,7 @@ function LoadLightBox(container_main) {
 
 	$('#frame').sly({
 		horizontal: 0, 
-		itemNav: 'centered', 
+		itemNav: 'smart', 
 		scrollBy: 1, 
 		startAt: 0,
 		next:'.lightbox .image .next, .lightbox .lightbox-frame .image ul li img',

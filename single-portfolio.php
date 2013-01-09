@@ -42,7 +42,7 @@
 						?>
 							<li <?php if ($iFirst) { echo 'class="active"'; $iFirst = false;}?>>
 								<a href="<?php echo  $img_url; ?>">
-									<img width="145" height="94" src="<? echo get_bloginfo('template_url').'/timthumb.php?src='.$publimg_thumb[0].'&w=145&h=94&zc=1';?>" class="" alt="" title="" />
+									<img width="145" height="127" src="<? echo get_bloginfo('template_url').'/timthumb.php?src='.$publimg_thumb[0].'&w=145&h=127&zc=1';?>" class="" alt="" title="" />
 								</a>
 								</a>
 							</li>							

@@ -6,64 +6,44 @@ $(document).ready(function(){
 	
 	$('#frame-portfolio').sly({
 		horizontal: 1,
-		itemNav: "forceCentered",
+		itemNav: "centered",
 		scrollBy: 1,
 		startAt: 0,
-		next: '.portfolio .next',
-		prev: '.portfolio .prev',
-		pagesBar: '.portfolio .pages'
+		nextPage: '.portfolio .next',
+		prevPage: '.portfolio .prev',
+
 	});
 
-	$('.portfolio .prev').hide();
 	$('.portfolio .next').fadeIn();
+	
 	$('#frame-portfolio').sly('toCenter', 1);
 	
 	
 	//отключаем переход слайдера по клику итема
 	$('#frame-portfolio ul li').unbind('mouseup');
 
-	$('#frame-portfolio ul').find('li').each(function(){
-		$(this).on( 'sly:active', function( event, $items, relatives ){ 
+	$('#frame-portfolio').on('sly:move', function( event, $items, relatives ){ 
+		
+		if ($items['cur'] == $items['min']) 
+			$('.portfolio .prev').hide();
+		else
+			$('.portfolio .prev').fadeIn();
 			
-			if (relatives.activeItem == 0) { 
-				$('#frame-portfolio').sly('toCenter', 1);					
-				return;
-			}
-			
-			relatives.items = $('#frame-portfolio ul li').size();
-			
-			//фикс для IE
-			if (relatives.activeItem > relatives.items-2) { 
-				$('#frame-portfolio').sly('toCenter', relatives.items-2);					
-				return;
-			}
-			
-			
-			//кнопка назад
-			if (relatives.activeItem > 1) 
-				$('.portfolio .prev').show();
-			else
-				$('.portfolio .prev').hide();
-				
-			//кнопка вперед
-			if (relatives.activeItem >= relatives.items-2) 
-				$('.portfolio .next').hide();
-			else
-				$('.portfolio .next').show();
-				
-		} );
-	});	
-	
-	//фикс страниц
-	$('.portfolio .pages').find('li').each(function() {
-		if ($(this).index()==0) $(this).hide();
-		if ($(this).index() >= $('#frame-portfolio ul li').size()-1) $(this).hide();
+		if ($items['cur'] == $items['max']) 
+			$('.portfolio .next').hide();
+		else
+			$('.portfolio .next').fadeIn();
+		
 	});
+
 	
 	$('.lightbox-holder').css('height',popupbg());
 	
 	$('.lightbox-holder .bg, .lightbox-holder .close').click(function(){
 		$(this).parents('.lightbox-holder').fadeOut(200);
+		$('.portfolio').show();
+		$('#footer').css('margin-top', 0 );		
+		
 		return false;
 	});
 
@@ -81,8 +61,13 @@ $(document).ready(function(){
 		$('.lightbox ').addClass('ajax_loading');
 		//---
 		
+		
+	
+		$('.lightbox-holder .lightbox').css({top:($('#frame-portfolio').offset().top)});
+		$('.portfolio').hide();
+		$('#footer').css('margin-top', 320 );
+		
 		$('.lightbox-holder').fadeIn(200);
-		$('.lightbox-holder .lightbox').css({top:($(window).height()/2-$('.lightbox-holder .lightbox').outerHeight()/2 + $(window).scrollTop())});
 		
 		var container_main = $(this).parent().find('.where-will-be-data');
 
@@ -143,7 +128,7 @@ function LoadLightBox(container_main) {
 
 	$('#frame').sly({
 		horizontal: 0, 
-		itemNav: 'centered', 
+		itemNav: 'smart', 
 		scrollBy: 1, 
 		startAt: 0,
 		next:'.lightbox a.next, .lightbox .lightbox-frame .image ul li img',

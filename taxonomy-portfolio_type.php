@@ -50,9 +50,7 @@
 				</ul>
 			
 			</div>
-			
-			<ul class="pages"></ul>	
-			
+						
 		</div>
 
 	<?php else : ?>
