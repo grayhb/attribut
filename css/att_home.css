@@ -1,0 +1,95 @@
+/* Стиль для скролла */
+
+#home-frame {
+	height:607px;
+	width:933px;
+	margin:0;
+	padding:0;
+	margin-bottom:15px;
+	overflow: hidden;
+}
+
+#home-frame ul li {
+	width:933px;
+	height:607px;
+	float:left;
+}
+
+#home-frame ul li a img{
+
+}
+
+#home-frame ul li.active  a img{
+
+}
+
+#home-frame ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+
+
+.toolbar {
+	position:absolute;
+	margin-top:-50px;
+	margin-left:10px;
+	z-indeX:9999;
+	display:block;
+	
+	background: url(../images/bg.png) ;
+	padding: 4px 3px 3px 10px;
+	border-radius: 5px;
+	
+	
+}
+
+ .toolbar a#button_action {
+	float:left;
+	display:block;
+	width:16px;
+	height:16px;
+	text-indent:-99999px;
+	background: url(../images/pause.png) no-repeat center center;
+}
+
+.toolbar a#button_action.play {
+	background: url(../images/play.png) no-repeat center center;
+}
+
+
+.toolbar .pages {
+	
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	margin-top:2px;
+	margin-left:25px;
+	line-height: 16px;
+	
+}
+
+.toolbar .pages li {
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	margin: 0px 5px;
+	text-indent: -999px;
+	background: none repeat scroll 0% 0% rgb(255, 255, 255);
+	border-radius: 2px 2px 2px 2px;
+	cursor: pointer;
+	overflow: hidden;
+	border: 1px solid #AAA;
+	margin-bottom:0px;
+}	
+
+.toolbar .pages li:hover {
+	background: none repeat scroll 0% 0% rgb(238, 238, 238);
+}	
+
+.toolbar .pages li.active {
+	background: none repeat scroll 0% 0% rgb(153, 153, 153);
+	border-color: rgb(136, 136, 136);
+	box-shadow: 0px 0px 0px 2px rgb(238, 238, 238) inset;
+}	

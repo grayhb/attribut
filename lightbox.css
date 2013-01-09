@@ -1,0 +1,485 @@
+.lightbox-holder {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: url("./images/lightbox-bg.png") repeat scroll 0% 0% transparent;
+}
+
+.lightbox {
+    position: absolute;
+    /*top: 5px;*/
+	background: none repeat scroll 0% 0% rgb(255, 255, 255);
+    padding: 10px 10px 10px 10px;
+	width:975px;
+	margin: 0px 0px 0px -487px;
+	left: 50%;
+}
+
+.lightbox h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+	font-size:14px;
+	height:23px;
+	color:#777;
+	padding-top:0px;
+	padding-left:10px;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 14px;
+    right: 13px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background: url("./images/close.gif") no-repeat scroll 0% 0% transparent;
+    width: 11px;
+    height: 10px;
+}
+
+
+
+.lightbox-frame {
+    height: 1%;
+}
+
+.lightbox .image {
+    float: left;
+	width:790px;
+	height: 550px;
+}
+
+.lightbox .up-disable,
+.lightbox .down-disable {
+	cursor: auto;
+	background: none;
+}
+.lightbox .image-holder {
+	overflow: hidden;
+	position:relative;
+	height: 440px;
+}
+
+.lightbox .image-list ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+	position:relative;
+}
+.lightbox .image-list ul li {
+	overflow: hidden;
+}
+
+
+.lightbox .prev, .lightbox .next {
+    text-indent: -9999px;
+	width:394px;
+	height:550px;
+    margin: 0px;
+    padding: 0px;	
+	z-index: 1;
+    position: relative;
+	display:block;
+	float:left;
+	background: url(./images/pub_prev.png) no-repeat  5px center transparent;
+}
+
+.lightbox .next {
+    float:right;
+	background: url(./images/pub_next.png) no-repeat 349px center transparent;
+}
+
+.lightbox .image ul {
+    margin: 0px auto;
+    padding: 0px;
+    list-style: none outside none;
+    position: relative;
+    width: 790px;
+    height: 550px;
+}
+
+.lightbox .image ul li {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+	width:600px;
+}
+
+.lightbox .description {
+    position: absolute;
+    left: 0px;
+    bottom: -28px;
+    width: 500px;
+    line-height: 18px;
+    letter-spacing: 1px;
+}
+
+.lightbox .bottom {
+    overflow: hidden;
+    /*width: 684px;*/
+    margin: 0px auto;
+    line-height: 20px;
+    padding: 3px 0px 0px;
+	
+	font-size:11px;
+
+	display:none;
+}
+
+
+.lightbox .number {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+
+
+.lightbox .scrollbar   {
+	right:10px;
+	height:550px; 
+	position: absolute;
+	width:13px; 
+}
+
+
+ .lightbox .scrollbar   .handle { 
+	border-radius: 2px; 
+	background: rgb(252, 252, 252); 
+	cursor: pointer; 
+	line-height: 0;
+	-webkit-box-shadow: 0 1px 0 #999;
+	-moz-box-shadow: 0 1px 0 #999;
+	-o-box-shadow: 0 1px 0 #999;
+	box-shadow: 0 1px 0 #999;
+	width:100%;
+}
+
+.lightbox .scrollbar {
+
+    background: none repeat scroll 0% 0% rgb(182,182,182);
+    border-radius: 2px 2px 2px 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(182,182,182);
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    line-height: 0;
+	
+}
+
+.ajax_loading {
+	background: url(./images/ajax-loader.gif) no-repeat center center;
+	background-color: #FFF;
+}
+
+
+/* Лайтбокс публикации  */ 
+
+.publications-lightbox {
+	width:725px;
+	margin: 0px 0px 0px -355px;
+	padding: 10px 20px 10px 10px;
+}
+
+.publications-lightbox .image {
+	width:550px;
+}
+
+.publications-lightbox .image-holder {
+	height: 510px;
+}
+
+.publications-lightbox .image-list ul li ul li {
+	height: 170px;
+	margin: 0 0 0 0;
+	float:right;
+}
+
+.publications-lightbox .image-list ul li ul li  a {
+	height:170px;
+	display:block;
+	padding-top:10px;
+}
+
+
+.publications-lightbox .image ul {
+	width: 550px;
+
+}
+
+.publications-lightbox .image ul li {
+	width: 550px;
+}
+
+.publications-lightbox .bottom {
+	width: 470px;
+	padding: 2px 0 0;
+	height: 30px;
+}
+
+.publications-lightbox .image-list {
+	width: 150px;
+	margin: -25px 0 0;
+}
+
+.publications-lightbox  #slider_holder  {
+	height:554px;	
+}
+
+
+.publications-lightbox  #slider_holder #frame {
+	margin-top: -2px;
+	height:554px;
+}
+
+
+.publications-lightbox  #slider_holder #frame ul li {
+	height:130px;
+	padding: 4px 5px 4px 0px;
+}
+
+.publications-lightbox .prev, .publications-lightbox .next {
+	width:275px;
+	background: url(./images/pub_prev.png) no-repeat  5px center transparent;
+}
+
+.publications-lightbox .next {
+	background: url(./images/pub_next.png)  no-repeat  225px center transparent;
+}
+
+
+
+/* Стиль для скролла */
+
+#slider_holder {
+	float:right;
+	height:550px;
+	width:175px;
+}
+
+#slider_holder .slidee {
+
+}
+
+
+#slider_holder .pages {
+	list-style: none outside none;
+	margin: 5px 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+#slider_holder .pages li {
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	margin: 0px 2px;
+	text-indent: -999px;
+	background: none repeat scroll 0% 0% rgb(255, 255, 255);
+	border-radius: 2px 2px 2px 2px;
+	cursor: pointer;
+	overflow: hidden;
+	border: 1px solid #AAA;
+	margin-bottom:5px;
+}	
+
+#slider_holder .pages li:hover {
+	background: none repeat scroll 0% 0% rgb(238, 238, 238);
+}	
+
+#slider_holder .pages li.active {
+	background: none repeat scroll 0% 0% rgb(153, 153, 153);
+	border-color: rgb(136, 136, 136);
+	box-shadow: 0px 0px 0px 2px rgb(238, 238, 238) inset;
+}	
+
+
+#slider_holder #frame ul li {
+	width:145px;
+	height:94px;
+	margin:0;
+	padding:6px 5px 10px 0px;
+	float:left;
+}
+
+#slider_holder #frame ul li a img{
+	border:solid 1px #ddd; 
+	-webkit-border-radius: 1px;
+	border-radius: 1px; 		
+	opacity:0.5;
+}
+
+#slider_holder #frame ul li.active  a img{
+	/*-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3);*/
+	opacity:1;
+	border:solid 1px #999; 
+}
+
+#slider_holder #frame ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+#slider_holder #frame {
+	height:550px;
+	width:145px;
+	margin:0;
+	padding-left:5px;
+	padding-right:5px;
+	float:left;
+}
+
+
+/*  Портфолио слайдер  */
+
+.portfolio {
+	width:936px;
+	height:630px;	
+	position:relative;
+}
+
+
+#frame-portfolio {
+	height:608px;	
+	overflow: hidden;
+}
+
+#frame-portfolio .portfolio-slide {
+	list-style: none;  
+	height: 100%; 
+	margin: 0; 
+	padding: 0; 
+}
+
+#frame-portfolio .portfolio-slide li {
+	float:left;
+	height:100%;
+	width:312px;
+	margin: 0;  padding: 0; position: relative;
+}
+
+
+#frame-portfolio .portfolio-slide li > div {
+	height:299px;
+	padding-bottom:5px;
+	
+}
+
+#frame-portfolio .portfolio-slide a {
+	text-decoration: none;
+}
+
+
+#frame-portfolio .portfolio-slide  img{
+	border: 1px solid #777;
+}
+
+#frame-portfolio .portfolio-slide .title {
+	position:relative;
+	width: 270px;
+	z-indeX:1;
+	left:0;
+	top:-303px;
+	height:299px;
+	
+}
+
+#frame-portfolio .portfolio-slide .title span {
+	position:absolute;
+	color: #a8a8a8;
+	background:url(./images/bg.png);
+	padding:10px 18px;
+	bottom:0;
+	left:1px;
+	width: 270px;
+	display:none;
+}
+
+#frame-portfolio .portfolio-slide  li div a:hover .title span {
+	display:block;
+}
+
+#frame-portfolio .portfolio-slide .head {
+	display:none;
+}
+
+
+
+.portfolio  .pages {
+	list-style: none outside none;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	height:13px; 
+	margin-top:2px;
+}
+
+.portfolio  .pages li {
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	margin: 0px 2px;
+	text-indent: -999px;
+	background: none repeat scroll 0% 0% rgb(255, 255, 255);
+	border-radius: 2px 2px 2px 2px;
+	cursor: pointer;
+	overflow: hidden;
+	border: 1px solid #AAA;
+	margin-bottom:5px;
+}	
+
+.portfolio .pages li:hover {
+	background: none repeat scroll 0% 0% rgb(238, 238, 238);
+}	
+
+.portfolio  .pages li.active {
+	background: none repeat scroll 0% 0% rgb(153, 153, 153);
+	border-color: rgb(136, 136, 136);
+	box-shadow: 0px 0px 0px 2px rgb(238, 238, 238) inset;
+}	
+
+.portfolio .prev,
+.portfolio .next {
+	position:absolute;
+	top: 256px;
+	left: 0;
+	text-indent:-9999px;
+	overflow: hidden;
+	background:url(./images/arrows.png) no-repeat 0 center;
+	width: 71px;
+	height: 95px;
+	z-index: 20;
+	margin-left:-35px;
+	display:none;
+}
+
+
+.portfolio .next {
+	left: auto;
+	right: -30px;
+	background-position: -71px 0;
+}
